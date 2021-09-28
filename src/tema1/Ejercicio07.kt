@@ -12,6 +12,6 @@ package tema1
 fun main() {
 
     val rangoImpares = 11..50 step 2
-    if (22 in rangoImpares step 2) { println("El 22 está en la cadena") }
-    if (39 in rangoImpares step 2) { println("El 39 está en la cadena") }
+    if (22 !in rangoImpares) { println("El 22 no está en la cadena") }
+    if (39 in rangoImpares) { println("El 39 está en la cadena") }
 }
