@@ -13,6 +13,6 @@ package tema1
 fun main() {
 
     val n: Int? = null
-    println(n?.let { "El número es: " + n })
+    println(n?.let { "El número es: " + n.toString() /*toString no necesario*/ })
     //println(n?.let { "El número es: $n" })
 }

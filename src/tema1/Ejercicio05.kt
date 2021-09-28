@@ -15,8 +15,9 @@ fun main() {
     val b = 9
     val c = a % b
     val d = (c + 1) / 2
-    println(!((a > b) && (c == d)))                 // false
-    println((a > b) && (c != d))                    // false
-    println(!(a != b + 1))  // println(a == b + 1)  // true
-    println(((a * b) % 2) > ((c + 1) / 2))          // false
+    println("a = 10    b = 9    c = 10 % 9    d = (c + 1) / 2")
+    println("!((a > b) && (c == d)) = ${!((a > b) && (c == d))}")                   // false
+    println("(a > b) && (c != d) = ${(a > b) && (c != d)}")                         // false
+    println("!(a != b + 1) = ${!(a != b + 1)}")      // println(a == b + 1)         // true
+    println("((a * b) % 2) > ((c + 1) / 2) = ${((a * b) % 2) > ((c + 1) / 2)}")     // false
 }
