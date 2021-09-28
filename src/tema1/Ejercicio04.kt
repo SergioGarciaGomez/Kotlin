@@ -13,11 +13,11 @@ package tema1
 fun main() {
 
     val n1 = 0xAB
-    val n2 = 3
+    val n2 = 0x03
 
-    println("AB and 3 = ${n1 and n2}") // Resultado = 3    Hex = 03
-    println("AB or 3 = ${n1 or n2}")   // Resultado = 171  Hex = AB
-    println("AB xor 3 = ${n1 xor n2}") // Resultado = 168  Hex = A8
-    println("AB shr 2 = ${n1 shr 2}")  // Resultado = 42   Hex = 2A
-    println("AB shl 3 = ${n1 shl 3}")  // Resultado = 1368 Hex = 558
+    println("AB and 03 = ${n1 and n2}") // Resultado = 3     Hex = 03
+    println("AB or 03 = ${n1 or n2}")   // Resultado = 171   Hex = AB
+    println("AB xor 03 = ${n1 xor n2}") // Resultado = 168   Hex = A8
+    println("AB shr 2 = ${n1 shr 2}")   // Resultado = 42    Hex = 2A
+    println("AB shl 3 = ${n1 shl 3}")   // Resultado = 1368  Hex = 558
 }
