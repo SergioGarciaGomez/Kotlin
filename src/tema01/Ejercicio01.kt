@@ -1,4 +1,4 @@
-package tema1
+package tema01
 
 /*
     @author Sergio García
