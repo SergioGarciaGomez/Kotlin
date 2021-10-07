@@ -1,4 +1,4 @@
-package objetos
+package practica
 
 const val algo = "" // las constantes solo almacenan tipos primitivos
 

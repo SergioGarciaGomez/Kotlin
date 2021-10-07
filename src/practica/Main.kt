@@ -1,26 +1,28 @@
+package practica
+
 fun main() {
     println("Hello, world!!!")
     val valor = 10
-    var secuencia = arrayOf(1, 2, 3, 4, 5, 6)
-    var secuenciaNulos = arrayOfNulls<Int>(5)
+    // var secuencia = arrayOf(1, 2, 3, 4, 5, 6)
+    // var secuenciaNulos = arrayOfNulls<Int>(5)
     val cadena = "Esto es una cadena"
     println("El valor de mis variables es $cadena y $valor y \$valor")
 
     // post incremento y pre incremento / a++ / ++a
-    val cadena2: String? = null;
+    val cadena2: String? = null
     println(cadena2?.length) // variable? = null safety, se asegura que la variable no es nula
-    val rangoNumerico = 1..20;
-    println(rangoNumerico); // printa el objeto, habría que recorrer el objeto para printar el rango
-    val rangoNumericoConSaltos = 1..20 step 2; // 1,3,5,7,9... esto ya no es un rango sino una progresión
+    val rangoNumerico = 1..20
+    println(rangoNumerico) // printa el objeto, habría que recorrer el objeto para printar el rango
+    // val rangoNumericoConSaltos = 1..20 step 2; // 1,3,5,7,9... esto ya no es un rango sino una progresión
     val rango: CharProgression = 'z'.downTo('a')
     for (l in rango) print(" $l")
     println()
     val cadena3: String? = null
     println("La cadena contiene: ${cadena3 ?: "Un valor nulo"}")
 
-    when (cadena3 != null) {
+    //when (cadena3 != null) {
 
-    }
+    //}
 
     val edad = 17
     val resultadoIf = if (edad >= 18) "Mayor de edad" else "Menor de edad"
