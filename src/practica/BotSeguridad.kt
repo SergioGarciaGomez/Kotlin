@@ -14,11 +14,12 @@ fun botDeSeguridad(person: Person) {
 
         when(person.age) {
             in 0..17 -> println("Eres menor de edad. Acceso denegado.")
-            in 18..64 -> println("Eres mayor de edad, acceso concedido.")
+            in 18..64 -> {
+                println("Eres mayor de edad, acceso concedido.")
+                printHobbies(person)
+            }
             in 65..100 -> println("Eres demasiado mayor. Acceso denegado.")
         }
-
-        printHobbies(person)
 
     } else {
         println("Error. Nombre incorrecto")
@@ -27,10 +28,10 @@ fun botDeSeguridad(person: Person) {
 
 fun printHobbies(person: Person) {
 
-    println("Mis hobbies son ${person.hobbies.size}")
+    println("Tus hobbies son ${person.hobbies.size}")
 
-    for (hobbie in person.hobbies) {
-        println(hobbie)
+    for (hobby in person.hobbies) {
+        println(hobby)
     }
 }
 
