@@ -1,5 +1,0 @@
-package objetos
-
-object Foo {
-
-}

@@ -1,4 +1,4 @@
-package practica
+package objetos
 
 const val algo = "" // las constantes solo almacenan tipos primitivos
 
@@ -9,15 +9,15 @@ abstract class Personaje { // open por defecto
     var mana: Int = 100
 }
 
-class Mago: Personaje() {
-
-}
+class Mago: Personaje()
 
 data class Item(var nombre: String, var cantidad: Int)
 
 val item = Item("Poti de vida", 10)
 
-enum class tipoItem(puntos: Int) {
+
+
+enum class TipoItem(puntos: Int) {
     COMUN(1), POCOCOMUN(3), RARO(5), EPICO(10), LEGENDARIO(50)
 }
 
@@ -29,8 +29,8 @@ fun main() {
     mago.nombre = "Otro" //setter
     println(mago.nombre) //getter
     println(mago.vida)
-    tipoItem.COMUN
-    println(tipoItem.values().size)
+    TipoItem.COMUN
+    println(TipoItem.values().size)
 
    /* while (mago.vida > 0) {
         println("$")
