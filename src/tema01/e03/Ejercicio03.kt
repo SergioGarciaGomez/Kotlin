@@ -15,15 +15,21 @@ package tema01.e03
 
 fun main() {
 
-    val array1 = arrayOf(3, 4, 1, 5)
-    val array2 = arrayOf(1, 5, 3, 4)
-    foo(array1, array2)
+    val v = arrayOf(3, 4, 1, 5)
+    val s = arrayOf(1, 5, 3, 4)
+    //foo(v, s)
+    if (circular(v, s)) {
+        println("El vector ES circular")
+    } else {
+        println("El vector NO ES circular")
+    }
+
 }
 
-// Soy consciente de que así solo funciona con un array de size 4, pero no soy capaz de dar con
-// la otra forma de hacerlo, me he quedado cerca, pero al final lo hice así porque no me salía del tod o
-
 private fun foo(a1: Array<Int>, a2: Array<Int>) {
+
+    // Soy consciente de que así solo funciona con un array de size 4, pero no soy capaz de dar con
+    // la otra forma de hacerlo, me he quedado cerca, pero al final lo hice así porque no me salía del tod o
 
     if ((a1[0] == a2[1]) && (a1[1] == a2[2]) && (a1[2] == a2[3]) && (a1[3] == a2[0])) {
         println("Los arrays son circularmente iguales")
@@ -37,6 +43,19 @@ private fun foo(a1: Array<Int>, a2: Array<Int>) {
         println("Los arrays NO SON circularmente iguales")
     }
 
+}
+
+fun circular(v: Array<Int>, s: Array<Int>):Boolean {
+
+    var i = 0
+    var j = s.lastIndexOf(v[0])
+
+    while ((i < v.size) && (v[i] == s[j])) {
+        i++
+        j = (j + 1) % s.size
+    }
+
+    return i == v.size // Si i vale lo mismo que el tamaño del primer array, es que se ha recorrido entero
 }
 
 

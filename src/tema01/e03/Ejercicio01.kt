@@ -13,12 +13,19 @@ import objetos.algo
 */
 
 fun main() {
-    foo(false)
+    val dato = 12
+    foo(dato)
 }
 
 private fun foo(dato: Any) {
     println("El nombre oficial del tipo de variable es ${dato.javaClass.canonicalName.uppercase()}")
     println("La variable es de tipo ${dato.javaClass.simpleName.uppercase()}")
+
+    when(dato) {
+        is Int -> println("la variable es de tipo INT")
+        is Boolean -> println("la variable es de tipo BOOLEANO")
+        is String -> println("la variable es de tipo STRING")
+    }
 }
 
 

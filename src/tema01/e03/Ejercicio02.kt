@@ -22,14 +22,15 @@ fun main() {
     foo(array)
 }
 
-private fun <T> foo(a: Array<T>, booleano:Boolean = false) {
+private fun <T> foo(a: Array<out T>, booleano:Boolean = false) {
 
     var cadena = ""
 
     if (booleano) {
         a.forEachIndexed { _, item -> cadena += "$item\n" }
     } else {
-        a.forEachIndexed { _, item -> cadena += "$item, " }
+        a.forEachIndexed { index, item -> cadena += "$item"
+        if (index < a.size - 1) cadena += ", "}
     }
 
     println(cadena)

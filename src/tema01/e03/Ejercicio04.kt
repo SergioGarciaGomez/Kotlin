@@ -11,7 +11,7 @@ package tema01.e03
 
 fun main() {
 
-    val array = arrayOf("Gato", "Perro", "Lagarto", "Caballo", )
+    val array = arrayOf("Gato", "Perro", "Lagarto", "Caballo")
     println("Array true (2 espacios)")
     foo(array, true)
     println("Array false (1 tabulador)")
